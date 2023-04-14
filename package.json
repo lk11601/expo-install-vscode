@@ -1,0 +1,60 @@
+{
+  "name": "expo-package-installer",
+  "displayName": "Expo Package Installer",
+  "description": "A Visual Studio Code extension that installs Expo packages when clicking on a yellow globe above an import statement.",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.installExpoPackage",
+        "title": "Install Expo Package"
+      }
+    ],
+    "languages": [
+      {
+        "id": "javascript",
+        "aliases": [
+          "JavaScript"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "codeLens": {
+      "languages": [
+        "javascript",
+        "javascriptreact"
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.0.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^14.0.0",
+    "@types/vscode": "^1.62.0",
+    "@types/ws": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.0.0",
+    "glob": "^7.0.0",
+    "mocha": "^9.0.0",
+    "typescript": "^4.0.0",
+    "@vscode/test-electron": "^2.0.0",
+    "ws": "^7.0.0"
+  },
+  "license": "MIT"
+}
